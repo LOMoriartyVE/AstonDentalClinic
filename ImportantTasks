@@ -1,8 +1,0 @@
-What about Business Email (e.g., info@astondentalclinic.com)?
-Option 1 (Free): Use Cloudflare Email Routing (free). Any email sent to info@astondentalclinic.com automatically forwards directly to the doctor's personal Gmail or clinic inbox.
-Option 2 (Free): Zoho Mail Free Tier (free for up to 5 custom domain mailboxes).
-Option 3 (Paid): If the clinic insists on cPanel webmail, a starter shared host (like Namecheap Stellar or Hostinger) costs ~$25 – $35/year.
-
-Google Reviews:
-- Currently 5.0 Star rated on Google Maps.
-- When the clinic collects more written text reviews on Google Maps in the future, we can easily re-expand the reviews section into a full testimonial grid/carousel.
