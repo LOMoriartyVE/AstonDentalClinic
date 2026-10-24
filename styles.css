@@ -32,6 +32,7 @@
 
   --font-en: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-ar: 'Cairo', system-ui, -apple-system, sans-serif;
+  --font-ku: 'Vazirmatn', system-ui, -apple-system, sans-serif;
 
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 14px -2px rgba(15, 23, 42, 0.08);
@@ -64,12 +65,32 @@ html.no-transitions *::after {
   font-family: var(--font-ar);
 }
 
+[lang="ku"],
+[lang="ku"] body,
+[lang="ku"] button,
+[lang="ku"] input,
+[lang="ku"] select,
+[lang="ku"] textarea {
+  font-family: var(--font-ku) !important;
+}
+
 [dir="rtl"] .brand-title {
   letter-spacing: 0;
 }
 
 [dir="rtl"] .hero-heading {
   font-family: var(--font-ar);
+}
+
+[lang="ku"] .hero-heading,
+[lang="ku"] h1,
+[lang="ku"] h2,
+[lang="ku"] h3,
+[lang="ku"] h4,
+[lang="ku"] h5,
+[lang="ku"] h6,
+[lang="ku"] .brand-arabic {
+  font-family: var(--font-ku) !important;
 }
 
 *, *::before, *::after {
