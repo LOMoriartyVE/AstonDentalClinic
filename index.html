@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function() {
+      try {
+        var savedLang = localStorage.getItem('aston_lang');
+        if (savedLang === 'ar' || savedLang === 'ku') {
+          document.documentElement.lang = savedLang;
+          document.documentElement.dir = 'rtl';
+        } else {
+          document.documentElement.lang = 'en';
+          document.documentElement.dir = 'ltr';
+        }
+        var savedTheme = localStorage.getItem('aston_theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Aston Dental Clinic | Premier Dental & Cosmetic Center in Kirkuk</title>
+
+  <meta name="description" content="Aston Dental Clinic (عيادة أستون لطب وتجميل الأسنان) in Kirkuk, Iraq. Specializing in Hollywood Smile, Dental Implants, Cosmetic Veneers, Orthodontics, and Painless Dentistry. 5.0 Star Rated on Google Maps.">
+  <meta name="keywords" content="Aston Dental Clinic, عيادة أستون, dentist Kirkuk, dental clinic Kirkuk, Hollywood Smile Kirkuk, dental implants Kirkuk, دكتور اسنان كركوك, طب وتجميل الاسنان كركوك">
+  <meta property="og:title" content="Aston Dental Clinic | Luxury Dental & Aesthetic Care in Kirkuk">
+  <meta property="og:description" content="5.0-Star Google Rated Clinic. Advanced digital dentistry, Hollywood Smile veneers, implants, and gentle painless care. Al-Quds Street, Kirkuk.">
+  <meta property="og:image" content="assets/images/hero-clinic.webp">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/svg+xml" href="Logos/Logo.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Aston Dental Clinic",
+    "alternateName": "عيادة أستون لطب وتجميل الأسنان",
+    "image": "assets/images/hero-clinic.webp",
+    "telephone": "+9647728911733",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Al-Quds Street, Near Al-Shirazi Veterinary Clinic",
+      "addressLocality": "Kirkuk",
+      "addressRegion": "Kirkuk Governorate",
+      "postalCode": "36001",
+      "addressCountry": "IQ"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.433235,
+      "longitude": 44.366470
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "24",
+      "bestRating": "5"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday"],
+        "opens": "14:00",
+        "closes": "20:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/aston_dental_clinic",
+      "https://www.facebook.com/p/Aston-Dental-Clinic-%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9-%D8%A3%D8%B3%D8%AA%D9%88%D9%86-%D9%84%D8%B7%D8%A8-%D9%88%D8%AA%D8%AC%D9%85%D9%8A%D9%84-%D8%A7%D9%84%D8%A7%D8%B3%D9%86%D8%A7%D9%86-100069654400282/"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="live-status-pill" id="liveClinicStatus">
+          <span class="status-indicator-dot"></span>
+          <span class="status-text" data-i18n="checkingStatus">Checking hours...</span>
+        </span>
+        <span class="top-bar-divider">|</span>
+        <span class="top-bar-location">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span data-i18n="locationTop">Al-Quds Street, Kirkuk, Iraq</span>
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:07728911733" class="top-bar-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>0772 891 1733</span>
+        </a>
+        <div class="theme-switch-wrap">
+          <button id="themeToggleBtn" class="theme-btn" aria-label="Toggle Dark Mode" onclick="toggleTheme()">
+            <svg class="theme-icon sun-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="theme-icon moon-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <span class="theme-text" id="themeText" data-i18n="themeDark">Dark</span>
+          </button>
+        </div>
+        <div class="lang-switch-wrap" id="langSwitchWrap">
+          <button id="langToggleBtn" class="lang-btn" aria-label="Select Language" onclick="toggleLangDropdown(event)">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span class="lang-current" id="currentLangLabel">کوردی</span>
+            <svg class="lang-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button type="button" class="lang-option" data-lang="ku" onclick="applyLanguage('ku')">کوردی</button>
+            <button type="button" class="lang-option" data-lang="ar" onclick="applyLanguage('ar')">العربية</button>
+            <button type="button" class="lang-option" data-lang="en" onclick="applyLanguage('en')">English</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header" id="navbar">
+    <div class="container nav-container">
+
+      <a href="javascript:void(0)" onclick="navigateTo('home')" class="brand-logo" aria-label="Aston Dental Clinic Home">
+        <div class="brand-text-row">
+          <span class="brand-title">ASTON</span>
+          <span class="brand-subtitle">DENTAL CLINIC</span>
+          <span class="brand-sep">|</span>
+          <span class="brand-arabic" id="brandSubText" data-i18n="brandSubText">عيادة أستون</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="javascript:void(0)" onclick="navigateTo('home')" class="nav-link active" data-i18n="navHome">Home</a>
+        <a href="javascript:void(0)" onclick="navigateTo('services')" class="nav-link" data-i18n="navServices">Treatments</a>
+        <a href="javascript:void(0)" onclick="navigateTo('before-after')" class="nav-link" data-i18n="navSmileGallery">Results</a>
+        <a href="javascript:void(0)" onclick="navigateTo('doctor')" class="nav-link" data-i18n="navDoctor">Doctor</a>
+        <a href="javascript:void(0)" onclick="navigateTo('reviews')" class="nav-link" data-i18n="navReviews">Reviews</a>
+        <a href="javascript:void(0)" onclick="navigateTo('contact')" class="nav-link" data-i18n="navLocation">Hours & Location</a>
+      </nav>
+
+      <div class="nav-cta-group">
+        <a href="https://wa.me/9647728911733?text=Hello%20Aston%20Dental%20Clinic,%20I%20would%20like%20to%20book%20a%20consultation" target="_blank" rel="noopener" class="btn-whatsapp" title="Chat on WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span class="btn-text-desk" data-i18n="chatWhatsApp">WhatsApp</span>
+        </a>
+
+        <button class="btn btn-primary" onclick="navigateTo('booking')" data-i18n="bookAppointment">Book Appointment</button>
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle mobile navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop" onclick="closeMobileMenu()"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-text-row">
+        <span class="brand-title">ASTON</span>
+        <span class="brand-subtitle">DENTAL</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <button class="theme-btn" aria-label="Toggle Dark Mode" onclick="toggleTheme()" style="padding: 0.35rem 0.65rem;">
+          <svg class="theme-icon sun-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-icon moon-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-drawer-close" onclick="closeMobileMenu()" aria-label="Close menu">&times;</button>
+      </div>
+    </div>
+    <div class="mobile-lang-segmented">
+      <button type="button" class="mobile-lang-btn" data-lang="ku" onclick="applyLanguage('ku')">کوردی</button>
+      <button type="button" class="mobile-lang-btn" data-lang="ar" onclick="applyLanguage('ar')">العربية</button>
+      <button type="button" class="mobile-lang-btn" data-lang="en" onclick="applyLanguage('en')">English</button>
+    </div>
+    <div class="mobile-drawer-links">
+      <a href="javascript:void(0)" onclick="navigateTo('home')" class="mobile-nav-link" data-i18n="navHome">Home</a>
+      <a href="javascript:void(0)" onclick="navigateTo('services')" class="mobile-nav-link" data-i18n="navServices">Treatments</a>
+      <a href="javascript:void(0)" onclick="navigateTo('before-after')" class="mobile-nav-link" data-i18n="navSmileGallery">Results</a>
+      <a href="javascript:void(0)" onclick="navigateTo('doctor')" class="mobile-nav-link" data-i18n="navDoctor">Doctor</a>
+      <a href="javascript:void(0)" onclick="navigateTo('reviews')" class="mobile-nav-link" data-i18n="navReviews">Reviews</a>
+      <a href="javascript:void(0)" onclick="navigateTo('contact')" class="mobile-nav-link" data-i18n="navLocation">Hours & Location</a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-primary w-full" onclick="navigateTo('booking')" data-i18n="bookAppointment">Book Appointment</button>
+      <a href="tel:07728911733" class="btn btn-outline w-full" style="margin-top: 0.5rem;">0772 891 1733</a>
+    </div>
+  </div>
+
+  <section class="hero-section" id="home">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-star">★ 5.0</span>
+          <span class="badge-text" data-i18n="heroBadge">Kirkuk's Premier Dental & Cosmetic Center</span>
+        </div>
+        <h1 class="hero-heading" data-i18n="heroTitle">
+          Redefining Your Smile With <span class="gradient-text">Artistry & Precision</span>
+        </h1>
+        <p class="hero-subheading" data-i18n="heroDesc">
+          Welcome to Aston Dental Clinic in Kirkuk. Experience bespoke smile makeovers, digital dental implants, and gentle family dentistry crafted in an ultra-luxurious, state-of-the-art clinical environment.
+        </p>
+
+        <div class="hero-cta-group">
+
+          <button class="btn btn-primary btn-lg" onclick="navigateTo('booking')" data-i18n="heroBookCta">
+            <span>Schedule Your Visit</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <a href="tel:07728911733" class="btn btn-outline btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span data-i18n="heroCallCta">Call 0772 891 1733</span>
+          </a>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="stat-card">
+            <span class="stat-num">5.0 ★</span>
+            <span class="stat-label" data-i18n="statGoogle">Google Rating</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">100%</span>
+            <span class="stat-label" data-i18n="statSatisfaction">Patient Satisfaction</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">3D</span>
+            <span class="stat-label" data-i18n="statGuided">Digital Diagnostics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <img src="assets/images/hero-clinic.webp" alt="Aston Dental Clinic Specialist and Patient Consultation" class="hero-main-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quick-strip">
+    <div class="container quick-strip-grid">
+      <div class="strip-item">
+        <div class="strip-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <h4 data-i18n="stripHoursTitle">Clinic Hours</h4>
+          <p data-i18n="stripHoursDesc">Sat – Wed: 2:00 PM – 8:00 PM (Thu & Fri: Closed)</p>
+        </div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <h4 data-i18n="stripContactTitle">Direct Inquiries</h4>
+          <p>0772 891 1733 / WhatsApp Available</p>
+        </div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <h4 data-i18n="stripLocationTitle">Location</h4>
+          <p data-i18n="stripLocationDesc">Al-Quds St, Near Al-Shirazi Clinic, Kirkuk</p>
+        </div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div>
+          <h4 data-i18n="stripReviewsTitle">Patient Choice</h4>
+          <p data-i18n="stripReviewsDesc">5.0 Star Verified Reviews on Google Maps</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="tagServices">Comprehensive Dental Treatments</span>
+        <h2 class="section-title" data-i18n="servicesTitle">Personalized Care for Every Dental Need</h2>
+        <p class="section-desc" data-i18n="servicesDesc">
+          From aesthetic Hollywood smiles to precision digital implants and gentle endodontics, our clinic in Kirkuk offers specialized, clinical solutions.
+        </p>
+      </div>
+
+      <div class="treatment-goal-card" id="goalSelectorCard">
+        <div class="goal-header">
+          <span class="goal-kicker" data-i18n="goalKicker">Interactive Treatment Finder</span>
+          <h3 class="goal-question" data-i18n="goalQuestion">What is your primary dental goal?</h3>
+          <p class="goal-subtitle" data-i18n="goalSubtitle">Select your main priority below to see our specialized clinical approach and recommended consultation details.</p>
+        </div>
+
+        <div class="goal-options-grid" id="goalOptionsGrid">
+          <button class="goal-opt-btn" onclick="selectDentalGoal('Hollywood Smile & Aesthetic Veneers')">
+            <span class="opt-indicator">01</span>
+            <div class="opt-content-wrap">
+              <strong data-i18n="goalOpt1Title">Hollywood Smile & Veneers</strong>
+              <span data-i18n="goalOpt1Desc">E-Max porcelain veneers, custom shade calibration, and full aesthetic smile redesign.</span>
+            </div>
+          </button>
+
+          <button class="goal-opt-btn" onclick="selectDentalGoal('Dental Implants & Missing Teeth')">
+            <span class="opt-indicator">02</span>
+            <div class="opt-content-wrap">
+              <strong data-i18n="goalOpt2Title">Dental Implants & Restorations</strong>
+              <span data-i18n="goalOpt2Desc">Replace missing teeth with biocompatible titanium & zirconia guided implants.</span>
+            </div>
+          </button>
+
+          <button class="goal-opt-btn" onclick="selectDentalGoal('Orthodontics & Clear Aligners')">
+            <span class="opt-indicator">03</span>
+            <div class="opt-content-wrap">
+              <strong data-i18n="goalOpt3Title">Clear Aligners & Orthodontics</strong>
+              <span data-i18n="goalOpt3Desc">Discreet teeth straightening, bite alignment, and gap correction for all ages.</span>
+            </div>
+          </button>
+
+          <button class="goal-opt-btn" onclick="selectDentalGoal('Toothache Relief, Root Canal & Cleaning')">
+            <span class="opt-indicator">04</span>
+            <div class="opt-content-wrap">
+              <strong data-i18n="goalOpt4Title">Pain Relief, Root Canal & Cleaning</strong>
+              <span data-i18n="goalOpt4Desc">Painless rotary root canal therapy, aesthetic fillings, and ultrasonic hygiene.</span>
+            </div>
+          </button>
+        </div>
+
+        <div class="goal-result-panel" id="goalResultPanel" style="display: none;">
+          <div class="result-details-box" id="resultDetailsBox">
+
+          </div>
+          <div class="result-actions-row">
+            <button class="btn btn-whatsapp" id="goalWhatsAppBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span data-i18n="goalWhatsAppBtn">Discuss on WhatsApp</span>
+            </button>
+            <button class="btn btn-primary" onclick="navigateTo('booking')" data-i18n="bookThisTreatment">
+              Book This Visit
+            </button>
+            <button class="btn btn-outline" onclick="changeDentalGoal()" data-i18n="changeServiceBtn">
+              Change Service
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-grid" style="margin-top: 3.5rem;">
+
+        <div class="service-card">
+          <div class="service-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="service-category" data-i18n="srvCatCosmetic">Aesthetic Excellence</span>
+          <h3 class="service-title" data-i18n="srv1Title">Hollywood Smile & Veneers</h3>
+          <p class="service-desc" data-i18n="srv1Desc">
+            Crafted with ultra-fine E-Max and premium ceramic materials. Harmonious, radiant smiles designed to match your unique facial symmetry and lifestyle.
+          </p>
+          <ul class="service-features">
+            <li data-i18n="srv1Feat1">Custom shade calibration</li>
+            <li data-i18n="srv1Feat2">Minimal tooth prep veneers</li>
+            <li data-i18n="srv1Feat3">Stain-resistant ceramic durability</li>
+          </ul>
+          <div class="service-footer">
+            <button class="btn btn-outline btn-sm" onclick="selectServiceForBooking('Hollywood Smile & Veneers')" data-i18n="srvBookBtn">Consult Now</button>
+          </div>
+        </div>
+
+        <div class="service-card featured">
+          <div class="service-badge-pill" data-i18n="badgePopular">Most Requested</div>
+          <div class="service-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></svg>
+          </div>
+          <span class="service-category" data-i18n="srvCatImplants">Permanent Restoration</span>
+          <h3 class="service-title" data-i18n="srv2Title">Digital 3D Dental Implants</h3>
+          <p class="service-desc" data-i18n="srv2Desc">
+            Replace missing teeth with titanium and zirconia implants engineered to look, feel, and function just like your natural teeth for a lifetime of confidence.
+          </p>
+          <ul class="service-features">
+            <li data-i18n="srv2Feat1">Digitally guided implant surgery</li>
+            <li data-i18n="srv2Feat2">Single, multiple & full-arch solutions</li>
+            <li data-i18n="srv2Feat3">Faster osseointegration & recovery</li>
+          </ul>
+          <div class="service-footer">
+            <button class="btn btn-primary btn-sm" onclick="selectServiceForBooking('Digital Dental Implants')" data-i18n="srvBookBtn">Consult Now</button>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <span class="service-category" data-i18n="srvCatOrtho">Alignment & Bite</span>
+          <h3 class="service-title" data-i18n="srv3Title">Orthodontics & Clear Aligners</h3>
+          <p class="service-desc" data-i18n="srv3Desc">
+            Straighten teeth discreetly. Offering invisible aligners and modern ceramic braces for teens and adults to correct crowding, spacing, and bite misalignments.
+          </p>
+          <ul class="service-features">
+            <li data-i18n="srv3Feat1">Virtually invisible clear aligners</li>
+            <li data-i18n="srv3Feat2">Low-friction ceramic brackets</li>
+            <li data-i18n="srv3Feat3">Regular digital progress tracking</li>
+          </ul>
+          <div class="service-footer">
+            <button class="btn btn-outline btn-sm" onclick="selectServiceForBooking('Clear Aligners & Orthodontics')" data-i18n="srvBookBtn">Consult Now</button>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="service-category" data-i18n="srvCatRestorative">Tooth Preservation</span>
+          <h3 class="service-title" data-i18n="srv4Title">Painless Root Canal & Crowns</h3>
+          <p class="service-desc" data-i18n="srv4Desc">
+            Save infected or damaged natural teeth with rotary endodontics and local anesthesia techniques designed to make the experience fast, quiet, and completely comfortable.
+          </p>
+          <ul class="service-features">
+            <li data-i18n="srv4Feat1">Micro-rotary file technology</li>
+            <li data-i18n="srv4Feat2">Tooth-colored composite fillings</li>
+            <li data-i18n="srv4Feat3">Same-week custom zirconia crowns</li>
+          </ul>
+          <div class="service-footer">
+            <button class="btn btn-outline btn-sm" onclick="selectServiceForBooking('Painless Root Canal')" data-i18n="srvBookBtn">Consult Now</button>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </div>
+          <span class="service-category" data-i18n="srvCatHygiene">Radiant Brightness</span>
+          <h3 class="service-title" data-i18n="srv5Title">Laser Whitening & Ultrasonic Cleaning</h3>
+          <p class="service-desc" data-i18n="srv5Desc">
+            Lift stubborn coffee, tea, and smoking stains up to 8 shades lighter in just one single 45-minute clinical session, combined with comprehensive tartar removal.
+          </p>
+          <ul class="service-features">
+            <li data-i18n="srv5Feat1">Enamel-safe LED laser activation</li>
+            <li data-i18n="srv5Feat2">Ultrasonic calculus & plaque removal</li>
+            <li data-i18n="srv5Feat3">Fluoride desensitizing treatment</li>
+          </ul>
+          <div class="service-footer">
+            <button class="btn btn-outline btn-sm" onclick="selectServiceForBooking('Laser Teeth Whitening')" data-i18n="srvBookBtn">Consult Now</button>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <span class="service-category" data-i18n="srvCatSurgery">Gentle Surgery</span>
+          <h3 class="service-title" data-i18n="srv6Title">Gum Contouring & Wisdom Teeth</h3>
+          <p class="service-desc" data-i18n="srv6Desc">
+            Correct gummy smiles with precision soft-tissue re-contouring, and undergo gentle, atraumatic wisdom tooth extractions with optimal healing protocols.
+          </p>
+          <ul class="service-features">
+            <li data-i18n="srv6Feat1">Laser gummy smile re-sculpting</li>
+            <li data-i18n="srv6Feat2">Atraumatic surgical wisdom extraction</li>
+            <li data-i18n="srv6Feat3">Biocompatible healing care</li>
+          </ul>
+          <div class="service-footer">
+            <button class="btn btn-outline btn-sm" onclick="selectServiceForBooking('Gum Contouring & Surgery')" data-i18n="srvBookBtn">Consult Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section before-after-section" id="before-after">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="tagResults">Clinical Excellence</span>
+        <h2 class="section-title" data-i18n="baTitle">Interactive Smile Transformations</h2>
+        <p class="section-desc" data-i18n="baDesc">
+          Slide across to see real-life clinical results. Both images stay perfectly aligned while the divider reveals the true before & after difference in real time.
+        </p>
+      </div>
+
+      <div class="ba-interactive-container">
+
+        <div class="ba-slider-card" id="baSliderWrap">
+          <div class="ba-image-container" id="baImageContainer">
+
+            <img src="assets/images/smile-after.webp" alt="After Treatment - Hollywood Smile Result" class="ba-img ba-img-after">
+            <span class="ba-label label-after" data-i18n="labelAfter">AFTER ASTON CARE</span>
+
+            <div class="ba-before-layer" id="baBeforeLayer">
+              <img src="assets/images/smile-before.webp" alt="Before Treatment - Discoloration and Alignment" class="ba-img ba-img-before">
+              <span class="ba-label label-before" data-i18n="labelBefore">BEFORE TREATMENT</span>
+            </div>
+
+            <div class="ba-divider-line" id="baDividerLine">
+              <div class="ba-handle-btn" aria-label="Drag slider to compare before and after">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 3 12 9 6"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/><polyline points="15 18 21 12 15 6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="ba-caption-bar">
+            <div>
+              <h4 data-i18n="baCaseTitle">Full Hollywood Smile Makeover & Whitening</h4>
+              <p data-i18n="baCaseSub">Custom ultra-thin porcelain veneers, shade matching, and gingival aesthetic sculpting.</p>
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="selectServiceForBooking('Hollywood Smile & Veneers')" data-i18n="baConsultCta">
+              Get Your Smile Design
+            </button>
+          </div>
+        </div>
+
+        <div class="ba-highlights-grid">
+          <div class="highlight-box">
+            <div class="highlight-num">01</div>
+            <h4 data-i18n="baPoint1Title">Digital 3D Smile Simulation</h4>
+            <p data-i18n="baPoint1Desc">Preview your final smile contour and shade on our digital screens before any procedure begins.</p>
+          </div>
+          <div class="highlight-box">
+            <div class="highlight-num">02</div>
+            <h4 data-i18n="baPoint2Title">Ultra-Thin Micro Preparation</h4>
+            <p data-i18n="baPoint2Desc">Maximum natural tooth structure preservation with biocompatible high-translucency ceramic.</p>
+          </div>
+          <div class="highlight-box">
+            <div class="highlight-num">03</div>
+            <h4 data-i18n="baPoint3Title">Long-Lasting Natural Luster</h4>
+            <p data-i18n="baPoint3Desc">Stain-resistant porcelain engineered to provide durable, stain-free brilliance for decades.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section doctor-section" id="doctor">
+    <div class="container">
+      <div class="doctor-profile-grid">
+        <div class="doctor-visual-column">
+          <div class="doctor-card-box">
+            <img src="assets/images/clinic-room.webp" alt="Aston Dental Clinic Suite in Kirkuk" class="doctor-main-img">
+            <div class="doctor-experience-tag">
+              <span class="exp-number">10+</span>
+              <span class="exp-caption" data-i18n="docYearsExp">Years Dedicated Practice in Kirkuk</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="doctor-bio-column">
+          <span class="section-tag" data-i18n="tagDoctor">Clinical Leadership</span>
+          <h2 class="section-title" data-i18n="docTitle">Dr. Credentials & Clinical Expertise</h2>
+          <p class="section-desc" data-i18n="docLeadDesc">
+            At Aston Dental Clinic, your care is led by experienced dental specialists dedicated to precision, aesthetics, and patient comfort. Combining academic excellence with over a decade of hands-on practice in Kirkuk.
+          </p>
+
+          <div class="doctor-credentials-list">
+            <div class="credential-item">
+              <div class="cred-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div>
+                <h4 data-i18n="cred1Title">Education & Degrees</h4>
+                <p data-i18n="cred1Desc">Bachelor of Dental Surgery (B.D.S) from College of Dentistry; Advanced Fellowship in Cosmetic Dentistry & Oral Implantology.</p>
+              </div>
+            </div>
+
+            <div class="credential-item">
+              <div class="cred-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </div>
+              <div>
+                <h4 data-i18n="cred2Title">International Certifications</h4>
+                <p data-i18n="cred2Desc">Certified in Digital Smile Design (DSD), European guided implant systems, and precision rotary endodontics.</p>
+              </div>
+            </div>
+
+            <div class="credential-item">
+              <div class="cred-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h4 data-i18n="cred3Title">Clinical Philosophy</h4>
+                <p data-i18n="cred3Desc">Conservative tooth preservation, hospital-grade Class-B sterilization, and zero-pain computerized local anesthesia.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="doc-cta-row">
+            <button class="btn btn-primary" onclick="navigateTo('booking')" data-i18n="docConsultBtn">
+              Book Consultation With Doctor
+            </button>
+            <a href="tel:07728911733" class="btn btn-outline" data-i18n="docCallBtn">
+              Direct Inquiries: 0772 891 1733
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviews-section" id="reviews">
+    <div class="container">
+      <div class="google-rating-banner">
+        <div class="google-rating-content">
+          <div class="google-icon-circle">
+            <svg width="38" height="38" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.65v3.03h3.88c2.27-2.09 3.665-5.17 3.665-9.12z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.03c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.26v3.13C3.27 21.36 7.35 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.29c-.25-.72-.38-1.49-.38-2.29s.13-1.57.38-2.29V6.58H1.26C.46 8.17 0 9.99 0 12s.46 3.83 1.26 5.42l4.02-3.13z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.35 0 3.27 2.64 1.26 6.58l4.02 3.13c.95-2.83 3.6-4.96 6.72-4.96z"/></svg>
+          </div>
+          <div class="google-rating-details">
+            <div class="google-stars-row">
+              <span class="rating-big-score">5.0</span>
+              <span class="stars-visual">★★★★★</span>
+              <span class="verified-badge-tag" data-i18n="verifiedGoogleBadge">Verified on Google Maps</span>
+            </div>
+            <h3 class="google-rating-title" data-i18n="googleRatingTitle">
+              5.0 / 5.0 Star Rating on Google Maps
+            </h3>
+            <p class="google-rating-sub" data-i18n="googleRatingSub">
+              Recognized with 100% 5-star feedback by our patients in Kirkuk for hygiene, gentle care, and clinical excellence.
+            </p>
+          </div>
+        </div>
+
+        <div class="google-banner-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Aston+Dental+Clinic+Kirkuk" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span data-i18n="viewOnGoogle">View on Google Maps</span>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Aston+Dental+Clinic+Kirkuk" target="_blank" rel="noopener" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            <span data-i18n="leaveGoogleReview">Leave a Review on Google</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section location-section" id="contact">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="tagVisit">Plan Your Visit</span>
+        <h2 class="section-title" data-i18n="visitTitle">Hours & Location in Kirkuk</h2>
+        <p class="section-desc" data-i18n="visitDesc">Conveniently located on Al-Quds Street with dedicated parking and easy access.</p>
+      </div>
+
+      <div class="location-grid">
+
+        <div class="location-card">
+          <div class="loc-card-header">
+            <h3 data-i18n="locInfoTitle">Aston Dental Clinic</h3>
+            <span class="arabic-loc-name" data-i18n="locClinicSubtitle">عيادة أستون لطب وتجميل الأسنان</span>
+          </div>
+
+          <div class="status-banner" id="statusBanner">
+            <div class="status-banner-dot"></div>
+            <div>
+              <strong id="bannerStatusTitle">Clinic Status</strong>
+              <p id="bannerStatusDesc">Sat - Wed: 2:00 PM – 8:00 PM</p>
+            </div>
+          </div>
+
+          <div class="schedule-table-wrap">
+            <h4 class="schedule-title" data-i18n="weeklyHoursTitle">Weekly Working Hours</h4>
+            <ul class="schedule-list">
+              <li class="schedule-row" data-day="6">
+                <span class="day-name" data-i18n="daySat">Saturday</span>
+                <span class="day-hours">2:00 PM – 8:00 PM</span>
+              </li>
+              <li class="schedule-row" data-day="0">
+                <span class="day-name" data-i18n="daySun">Sunday</span>
+                <span class="day-hours">2:00 PM – 8:00 PM</span>
+              </li>
+              <li class="schedule-row" data-day="1">
+                <span class="day-name" data-i18n="dayMon">Monday</span>
+                <span class="day-hours">2:00 PM – 8:00 PM</span>
+              </li>
+              <li class="schedule-row" data-day="2">
+                <span class="day-name" data-i18n="dayTue">Tuesday</span>
+                <span class="day-hours">2:00 PM – 8:00 PM</span>
+              </li>
+              <li class="schedule-row" data-day="3">
+                <span class="day-name" data-i18n="dayWed">Wednesday</span>
+                <span class="day-hours">2:00 PM – 8:00 PM</span>
+              </li>
+              <li class="schedule-row closed" data-day="4">
+                <span class="day-name" data-i18n="dayThu">Thursday</span>
+                <span class="day-hours" data-i18n="statusClosed">Closed (Appointments)</span>
+              </li>
+              <li class="schedule-row closed" data-day="5">
+                <span class="day-name" data-i18n="dayFri">Friday</span>
+                <span class="day-hours" data-i18n="statusClosed">Closed</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="loc-contact-list">
+            <div class="contact-entry">
+              <div class="contact-icon-svg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong data-i18n="addressLabel">Address</strong>
+                <p data-i18n="addressDetail">Al-Quds Street, Near Al-Shirazi Veterinary Clinic, Kirkuk, Iraq</p>
+                <small class="plus-code">Plus Code: C9M8+7H Kirkuk</small>
+              </div>
+            </div>
+
+            <div class="contact-entry">
+              <div class="contact-icon-svg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <strong data-i18n="phoneLabel">Phone & Inquiries</strong>
+                <p><a href="tel:07728911733" class="phone-link">0772 891 1733</a> (+964 772 891 1733)</p>
+              </div>
+            </div>
+
+            <div class="contact-entry">
+              <div class="contact-icon-svg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </div>
+              <div>
+                <strong data-i18n="socialLabel">Follow Social Channels</strong>
+                <div class="social-links-row">
+                  <a href="https://www.instagram.com/aston_dental_clinic" target="_blank" rel="noopener" class="social-badge instagram">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    <span>@aston_dental_clinic</span>
+                  </a>
+
+                  <a href="https://www.facebook.com/p/Aston-Dental-Clinic-%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9-%D8%A3%D8%B3%D8%AA%D9%88%D9%86-%D9%84%D8%B7%D8%A8-%D9%88%D8%AA%D8%AC%D9%85%D9%8A%D9%84-%D8%A7%D9%84%D8%A7%D8%B3%D9%86%D8%A7%D9%86-100069654400282/" target="_blank" rel="noopener" class="social-badge facebook">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    <span>Aston Dental Clinic</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="loc-card-actions">
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=35.433234587631596,44.36646971613612" target="_blank" rel="noopener" class="btn btn-primary w-full">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+              <span data-i18n="getDirectionsBtn">Get Driving Directions</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="map-card-wrapper" id="mapWrapper">
+          <div class="map-skeleton" id="mapSkeleton">
+            <div class="map-skeleton-inner">
+              <div class="map-skeleton-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <span class="map-skeleton-text" data-i18n="loadingMap">Loading interactive map...</span>
+            </div>
+          </div>
+          <iframe 
+            id="googleMapIframe"
+            data-src="https://maps.google.com/maps?q=35.433234587631596,44.36646971613612&z=17&output=embed" 
+            class="google-map-iframe" 
+            title="Aston Dental Clinic Location in Kirkuk" 
+            referrerpolicy="no-referrer-when-downgrade" 
+            allowfullscreen>
+          </iframe>
+          <div class="map-overlay-card">
+            <div class="map-pin-pulse"></div>
+            <div>
+              <strong>Aston Dental Clinic (عيادة أستون)</strong>
+              <p>Al-Quds St • Kirkuk, Iraq</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section appointment-section" id="booking">
+    <div class="container">
+      <div class="booking-card">
+        <div class="booking-grid">
+          <div class="booking-intro">
+            <span class="section-tag" data-i18n="tagBooking">Reserve Your Slot</span>
+            <h2 class="booking-title" data-i18n="bookSectionTitle">Request An Appointment</h2>
+            <p class="booking-desc" data-i18n="bookSectionDesc">
+              Schedule your confidential consultation in Kirkuk. Fill in your preferred time and service, and our patient coordinator will confirm your visit or open directly in WhatsApp for instant booking.
+            </p>
+
+            <div class="booking-perks">
+              <div class="perk-item">
+                <span class="perk-icon">✓</span>
+                <span data-i18n="perk1">Comprehensive Smile Evaluation</span>
+              </div>
+              <div class="perk-item">
+                <span class="perk-icon">✓</span>
+                <span data-i18n="perk2">Zero Waiting Time Guarantee</span>
+              </div>
+              <div class="perk-item">
+                <span class="perk-icon">✓</span>
+                <span data-i18n="perk3">Instant WhatsApp Confirmation</span>
+              </div>
+            </div>
+
+            <div class="direct-call-box">
+              <span data-i18n="preferPhone">Prefer calling directly?</span>
+              <a href="tel:07728911733" class="direct-phone-num">0772 891 1733</a>
+            </div>
+          </div>
+
+          <form class="booking-form" id="mainBookingForm" onsubmit="handleAppointmentSubmit(event)">
+            <div class="form-group">
+              <label for="patientName" data-i18n="formName">Full Name *</label>
+              <input type="text" id="patientName" required placeholder="e.g. Ahmed Ali" class="form-input">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="patientPhone" data-i18n="formPhone">Phone Number *</label>
+                <input type="tel" id="patientPhone" required placeholder="077x xxx xxxx" class="form-input">
+              </div>
+              <div class="form-group">
+                <label for="preferredDate" data-i18n="formDate">Preferred Day *</label>
+                <input type="date" id="preferredDate" required class="form-input">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="serviceSelect" data-i18n="formService">Desired Treatment *</label>
+                <select id="serviceSelect" required class="form-input">
+                  <option value="" disabled selected data-i18n="selectService">Select Treatment</option>
+                  <option value="Hollywood Smile & Veneers">Hollywood Smile & E-Max Veneers</option>
+                  <option value="Digital Dental Implants">Digital Dental Implants</option>
+                  <option value="Clear Aligners & Orthodontics">Clear Aligners & Orthodontics</option>
+                  <option value="Laser Teeth Whitening">Laser Teeth Whitening</option>
+                  <option value="Painless Root Canal">Painless Root Canal & Crown</option>
+                  <option value="General Checkup & Cleaning">General Consultation & Cleaning</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="preferredTime" data-i18n="formTime">Time Window *</label>
+                <select id="preferredTime" required class="form-input">
+                  <option value="2:00 PM - 4:00 PM">2:00 PM – 4:00 PM</option>
+                  <option value="4:00 PM - 6:00 PM">4:00 PM – 6:00 PM</option>
+                  <option value="6:00 PM - 8:00 PM">6:00 PM – 8:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="patientNotes" data-i18n="formNotes">Additional Notes / Questions (Optional)</label>
+              <textarea id="patientNotes" rows="2" placeholder="Tell us about any specific concern..." class="form-input"></textarea>
+            </div>
+
+            <div class="form-buttons-row">
+              <button type="submit" class="btn btn-primary w-full" data-i18n="submitBooking">
+                Confirm & Book Online
+              </button>
+              <button type="button" class="btn btn-whatsapp w-full" onclick="bookViaWhatsApp()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span data-i18n="bookInstantWA">Book via Instant WhatsApp</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="footer-logo-row">
+          <div class="brand-text-row">
+            <span class="brand-title" style="color: #ffffff;">ASTON</span>
+            <span class="brand-subtitle">DENTAL CLINIC</span>
+            <span class="brand-sep" style="color: #38bdf8;">|</span>
+            <span class="brand-arabic" id="footerBrandSubText" data-i18n="brandSubText" style="color: #94a3b8;">عيادة أستون</span>
+          </div>
+        </div>
+        <p class="footer-desc" data-i18n="footerDesc">
+          Premier dental and aesthetic clinic in Kirkuk, Iraq. Providing world-class cosmetic dentistry, implants, and gentle oral healthcare with state-of-the-art European standards.
+        </p>
+        <div class="footer-social-row">
+          <a href="https://www.instagram.com/aston_dental_clinic" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/p/Aston-Dental-Clinic-%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9-%D8%A3%D8%B3%D8%AA%D9%88%D9%86-%D9%84%D8%B7%D8%A8-%D9%88%D8%AA%D8%AC%D9%85%D9%8A%D9%84-%D8%A7%D9%84%D8%A7%D8%B3%D9%86%D8%A7%D9%86-100069654400282/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/9647728911733" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n="footerNavTitle">Quick Navigation</h4>
+        <ul class="footer-links-list">
+          <li><a href="javascript:void(0)" onclick="navigateTo('home')" data-i18n="navHome">Home</a></li>
+          <li><a href="javascript:void(0)" onclick="navigateTo('services')" data-i18n="navServices">Dental Treatments</a></li>
+          <li><a href="javascript:void(0)" onclick="navigateTo('before-after')" data-i18n="navSmileGallery">Smile Results</a></li>
+          <li><a href="javascript:void(0)" onclick="navigateTo('doctor')" data-i18n="navDoctor">Doctor Credentials</a></li>
+          <li><a href="javascript:void(0)" onclick="navigateTo('reviews')" data-i18n="navReviews">Patient Reviews</a></li>
+          <li><a href="javascript:void(0)" onclick="navigateTo('contact')" data-i18n="navLocation">Location & Schedule</a></li>
+          <li><a href="javascript:void(0)" onclick="navigateTo('booking')" data-i18n="bookAppointment">Request Appointment</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n="footerHoursTitle">Working Schedule</h4>
+        <p class="footer-schedule-text">
+          <strong data-i18n="daysOpen">Saturday to Wednesday:</strong><br>
+          2:00 PM – 8:00 PM (14:00 - 20:00)
+        </p>
+        <p class="footer-schedule-text">
+          <strong data-i18n="daysClosed">Thursday & Friday:</strong><br>
+          Closed (By pre-arranged appointment)
+        </p>
+        <div class="footer-badge-rating">
+          ★ 5.0 / 5.0 Google Rating in Kirkuk
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n="footerContactTitle">Direct Contact</h4>
+        <p class="footer-contact-item">
+          <strong>Phone:</strong> <a href="tel:07728911733">0772 891 1733</a>
+        </p>
+        <p class="footer-contact-item">
+          <strong>WhatsApp:</strong> <a href="https://wa.me/9647728911733">+964 772 891 1733</a>
+        </p>
+        <p class="footer-contact-item">
+          <strong>Address:</strong> Al-Quds Street, Near Al-Shirazi Veterinary Clinic, Kirkuk, Iraq
+        </p>
+        <p class="footer-contact-item">
+          <strong>Coordinates:</strong> 35.433235, 44.366470
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>© 2026 Aston Dental Clinic (عيادة أستون لطب وتجميل الأسنان). All Rights Reserved.</p>
+        <p class="footer-credit">Crafted with precision & luxury aesthetics for patients in Kirkuk.</p>
+      </div>
+    </div>
+  </footer>
+
+  <aside class="floating-mobile-bar" aria-label="Quick contact actions">
+    <a href="tel:07728911733" class="float-btn call" aria-label="Call Aston Dental Clinic">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/9647728911733?text=Hello%20Aston%20Dental%20Clinic,%20I%20would%20like%20to%20inquire%20about%20a%20treatment" target="_blank" rel="noopener" class="float-btn whatsapp" aria-label="WhatsApp Aston Dental Clinic">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <button onclick="navigateTo('booking')" class="float-btn book" aria-label="Book Appointment">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Book</span>
+    </button>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=35.433234587631596,44.36646971613612" target="_blank" rel="noopener" class="float-btn directions" aria-label="Get Directions">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+      <span>Maps</span>
+    </a>
+  </aside>
+
+  <div class="toast-notification" id="toastNotification">
+    <div class="toast-icon">✓</div>
+    <div class="toast-message" id="toastMessage">Success</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
