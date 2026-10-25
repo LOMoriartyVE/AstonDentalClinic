@@ -1799,6 +1799,39 @@ body.mobile-drawer-open .mobile-drawer {
 .phone-link {
   color: var(--primary);
   font-weight: 700;
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.phone-intl {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: inline-block;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.phone-row-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+[dir="rtl"] .phone-row-block {
+  flex-direction: row;
+}
+
+a[href^="tel:"],
+.direct-phone-num,
+.phone-num,
+bdi {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .phone-link:hover {
