@@ -1854,13 +1854,26 @@ bdi {
 .social-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
   padding: 0.35rem 0.75rem;
   border-radius: var(--radius-full);
   font-size: 0.8rem;
   font-weight: 600;
   background: var(--body-bg);
   border: 1px solid var(--subtle-border);
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}
+
+.social-badge svg {
+  flex-shrink: 0;
+}
+
+.social-badge span,
+.social-badge bdi {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: inline-block;
 }
 
 .social-badge.instagram {
